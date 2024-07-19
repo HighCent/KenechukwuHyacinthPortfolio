@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 200vh;
+}
+header{
+    background-color: crimson;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1{
+    user-select: none;
+}
+.navigation_bar a{
+    color: white;
+    position: relative;
+    text-decoration:none;
+    margin-left: 40px;
+}
+.navigation_bar a:hover{
+    color: black;
+}
+.navigation_bar a::after{
+    content:" ";
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+.navigation_bar a:hover::after{
+    transform: scaleX(1);
+}
+.full_background{
+    background-color: rgb(4, 4, 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.buy_passes{
+    width: 100%;
+    background-color:white;
+    font-weight: bolder;
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.my_passes{
+    width: 100%;
+    background-color:white;
+    font-weight: bolder;
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px
+}
+.middle_body{
+    background-color: rgb(5, 90, 218);
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.scan_passes{
+    background-color: white;
+    margin-top: 60px;
+    width: 450px;
+    position: absolute;
+    left:550px;
+    height: 150px;
+    bottom: 70px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.customer_service{
+    width: 100%;
+    background-color: white;
+    font-weight: bolder;
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px
+}
+.Help{
+    width: 100%;
+    background-color:white;
+    font-weight: bolder;
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px
+}
+.trip_tools{
+    width: 100%;
+    background-color:white;
+    font-weight: bolder;
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 15px
+}
+.inner_scan_passes{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+/* .hr{ */
+    /* width: 100%; */
+    /* border: 2px solid grey; */
+/* } */
+.expiration_date_passes{
+    color: red;
+}
+.Active{
+    color: rgb(63, 62, 62);
+}
+.more_tickets{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 20px;
+    right: 550px;
+}
+.more_tickets:hover{
+    background-color: rgb(122, 122, 228);
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    padding-left: 7px;
+}
+p1{
+    color: white;
+    font-weight: bolder;
+    position:fixed;
+    bottom: 20px;
+}
+.general{
+    padding-top: 10px;
+}
+.general:hover{
+    background-color: rgb(16, 16, 207);
+    color: white;
+}
+.icons{
+    height: 20px;
+    width: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navigation_bar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation_bar a {
+        margin: 10px 0;
+    }
+
+    .full_background {
+        padding-top: 100px; /* Adjusting for the fixed header */
+    }
+
+    .general {
+        width: 90%;
+    }
+
+    .middle_body {
+        width: 90%;
+    }
+
+    .scan_passes {
+        width: 90%;
+    }
+}
