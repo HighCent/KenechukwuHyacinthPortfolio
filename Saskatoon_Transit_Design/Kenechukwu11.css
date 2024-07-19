@@ -1,12 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 200vh;
+    font-family: Arial, sans-serif;
 }
-header{
+
+header {
     background-color: crimson;
     width: 100%;
     padding: 20px 100px;
@@ -18,20 +21,28 @@ header{
     top: 0;
     left: 0;
 }
-h1{
+
+h1 {
     user-select: none;
 }
-.navigation_bar a{
+
+.navigation_bar {
+    display: flex;
+}
+
+.navigation_bar a {
     color: white;
     position: relative;
-    text-decoration:none;
+    text-decoration: none;
     margin-left: 40px;
 }
-.navigation_bar a:hover{
+
+.navigation_bar a:hover {
     color: black;
 }
-.navigation_bar a::after{
-    content:" ";
+
+.navigation_bar a::after {
+    content: " ";
     background-color: white;
     height: 3px;
     width: 100%;
@@ -39,12 +50,14 @@ h1{
     left: 0;
     bottom: -6px;
     transform: scaleX(0);
-    transition: .5s;
+    transition: 0.5s;
 }
-.navigation_bar a:hover::after{
+
+.navigation_bar a:hover::after {
     transform: scaleX(1);
 }
-.full_background{
+
+.full_background {
     background-color: rgb(4, 4, 27);
     display: flex;
     flex-direction: column;
@@ -53,25 +66,29 @@ h1{
     height: 100vh;
     width: 100%;
 }
-.buy_passes{
+
+.general {
     width: 100%;
-    background-color:white;
+    background-color: white;
     font-weight: bolder;
     text-align: center;
     height: 40px;
     border-radius: 10px;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.my_passes{
-    width: 100%;
-    background-color:white;
-    font-weight: bolder;
-    text-align: center;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 15px
+
+.buy_passes {
+    background-color: white;
 }
-.middle_body{
+
+.my_passes {
+    background-color: white;
+}
+
+.middle_body {
     background-color: rgb(5, 90, 218);
     width: 100%;
     height: 250px;
@@ -79,60 +96,50 @@ h1{
     margin-bottom: 15px;
     border-radius: 10px;
 }
-.scan_passes{
+
+.scan_passes {
     background-color: white;
     margin-top: 60px;
     width: 450px;
     position: absolute;
-    left:550px;
+    left: 550px;
     height: 150px;
     bottom: 70px;
     border-radius: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
 }
-.customer_service{
-    width: 100%;
+
+.customer_service {
     background-color: white;
-    font-weight: bolder;
-    text-align: center;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 15px
 }
-.Help{
-    width: 100%;
-    background-color:white;
-    font-weight: bolder;
-    text-align: center;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 15px
+
+.Help {
+    background-color: white;
 }
-.trip_tools{
-    width: 100%;
-    background-color:white;
-    font-weight: bolder;
-    text-align: center;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 15px
+
+.trip_tools {
+    background-color: white;
 }
-.inner_scan_passes{
+
+.inner_scan_passes {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
 }
-/* .hr{ */
-    /* width: 100%; */
-    /* border: 2px solid grey; */
-/* } */
-.expiration_date_passes{
+
+.expiration_date_passes {
     color: red;
 }
-.Active{
+
+.Active {
     color: rgb(63, 62, 62);
 }
-.more_tickets{
+
+.more_tickets {
     color: white;
     text-decoration: none;
     font-weight: bolder;
@@ -140,31 +147,45 @@ h1{
     bottom: 20px;
     right: 550px;
 }
-.more_tickets:hover{
+
+.more_tickets:hover {
     background-color: rgb(122, 122, 228);
     width: 100px;
     height: 25px;
     border-radius: 10px;
     padding-left: 7px;
 }
-p1{
+
+p1 {
     color: white;
     font-weight: bolder;
-    position:fixed;
+    position: fixed;
     bottom: 20px;
 }
-.general{
-    padding-top: 10px;
-}
-.general:hover{
-    background-color: rgb(16, 16, 207);
-    color: white;
-}
-.icons{
+
+.icons {
     height: 20px;
     width: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .navigation_bar a {
+        margin-left: 20px;
+    }
+
+    .scan_passes {
+        left: 200px;
+        width: 80%;
+    }
+
+    .more_tickets {
+        right: 200px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     header {
@@ -197,5 +218,42 @@ p1{
 
     .scan_passes {
         width: 90%;
+        left: 5%;
+    }
+
+    .more_tickets {
+        right: 5%;
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .general {
+        font-size: 14px;
+        height: auto;
+    }
+
+    .middle_body {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .scan_passes {
+        height: auto;
+        width: 95%;
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .more_tickets {
+        font-size: 12px;
+        width: 80px;
+        height: 20px;
+        right: 10px;
+    }
+
+    p1 {
+        font-size: 12px;
     }
 }
