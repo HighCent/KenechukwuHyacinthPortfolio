@@ -1,39 +1,42 @@
-html{
-    width:max-content;
-    height: 100%;
-}
-
-@media screen and (max-width:100%){
-    .affect{
-    
-    }
-}
-.div2{
-    font-size: 25px;
-    max-width: 800%;
-}
-.span1{
-    color: lawngreen;
-}
-*{
-    text-decoration: none;
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: auto;
-    max-width: auto;
-    
+    width: 100%;
+    height: auto;
 }
-.nav{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+body {
+    font-family: Arial, sans-serif;
 }
-.shawn{
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+li {
+    margin: 0 15px;
+}
+
+li a {
+    text-decoration: none;
+    color: crimson;
+}
+
+li a:hover {
+    color: lawngreen;
+}
+
+.shawn {
     position: fixed;
     height: 45px;
     width: 42px;
@@ -42,7 +45,7 @@ html{
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color:limegreen;
+    color: limegreen;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -52,185 +55,249 @@ html{
     pointer-events: none;
     transition: all 0.3s ease;
 }
-.nav:hover{
-    background-color:crimson;
-}
-.nav:after{
-    color: lawngreen;
-}
-.card .box{
-    transition: all 0.3s ease;
-}
-.box:hover .card{
-    transform: scale(1.05);
-}
-.box i{
-    font-size: 100px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.box:hover i{
-    color: antiquewhite;
-}
-ul{
-    list-style-type: none;
-    margin: 0px;
-    /* float: right; */
-    padding: 20px 24px;
-    /* width: 500px; */
-    /* display: flex; */
-    /* flex-direction: row; */
-    justify-content: space-around;
-    font-size: 25px;
-    color:crimson;
 
+.shawn.active {
+    opacity: 1;
+    pointer-events: auto;
 }
-section{
-    padding-top: 400px;
-}
-#div2{
+
+#div2 {
     padding-left: 15px;
     position: fixed;
-    /* background-color:gray; */
     width: 50px;
-    height:50px;
+    height: 50px;
     transition: 0.4s;
-     left: -200px; 
+    left: -200px; 
 }
-#div2.active{
+
+#div2.active {
     left: 0;
 }
-#div2 .togglebar{
+
+#div2 .togglebar {
     position: absolute;
     top: 30px;
-    left: 230px;
+    left: 5px;
 }
-.togglebar span{
+
+.togglebar span {
     width: 45px;
     height: 4px;
     background-color: lawngreen;
     display: block;
     margin-top: 4px;
 }
-.Section1{
-    font-size: 45px;
-    background-color:white;
+
+h1, p {
+    margin: 0;
 }
-.span1{
+
+.section {
+    padding: 20px;
+}
+
+.Section1, .Section2, #Section3id, #Section4id {
+    padding: 20px;
+}
+
+.Section1 {
+    font-size: 2.5rem;
+    background-color: white;
+}
+
+.Section1 h1 {
+    font-size: 2rem;
+}
+
+.span1 {
     color: lawngreen;
 }
-.wave{
+
+.wave {
     color: lawngreen;
 }
-.hireme{
+
+.hireme {
     color: black;
     background-color: lawngreen;
     border-radius: 5px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
+    text-decoration: none;
 }
-.center{
+
+.center {
     text-align: center;
 }
-.flex{
+
+.flex {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
-.nav{
+
+.nav {
     color: crimson;
     background-color: gray;
     height: 300px;
-    width: 300px;
-    padding: 10px 10px 10px 10px;
+    width: calc(33% - 20px);
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
     border: 3px solid tomato;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
-.special{
-    color: white;
-    font-size: 25px;
-    font-weight: 400;
-}
-li a:hover{
-    color:crimson;
-}
-li a:active{
-    color:lawngreen;
-}
-li:after{
-    color: crimson;
-}
-.provide{
-    font-size: 15px;
-}
-.all{
-    background-color:white;
-    padding-top: 20px;
-    padding-bottom: 225px;
-}
-.affect{
-    font-size: 25px;
-    text-align: center;
-}
-.img{
-    width: 600px;
-    height: 500px;
-    border-radius: 10px;
-    padding-left: 200px;
-}
-.Gen{
-font-size: 25px;
-}
-.sec{
-    height: 550px;
-    width: 600px;
 
+.nav:hover {
+    background-color: crimson;
 }
-.calm{
-    background-color:lawngreen ;
-    padding: 5px 5px 5px 5px;
-    border-radius: 10px;
+
+.box {
+    transition: all 0.3s ease;
 }
-.rest{
+
+.box i {
+    font-size: 3rem;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.box:hover i {
+    color: antiquewhite;
+}
+
+.provide {
+    font-size: 1.25rem;
+}
+
+.all {
+    background-color: white;
+    padding: 20px;
+}
+
+.affect {
+    font-size: 1.5rem;
     text-align: center;
 }
-.down{
-    font-size: 25px;
-}
-.see{
-    font-size: 20px;
-    padding-left: 50px;
-    text-align:left;
-}
-form{
-    width: 50px;
-}
-input{
-    width: 500px;
-    height: 50px;
-    border-radius: 10px 10px;
-    font-size: 25px;
-    border: 1px solid grey;
-}
-textarea{
-    border-radius: 10px;
-    border: 1px solid grey;
-    font-size: 25px;
-}
-button{
-    background-color: lawngreen;
-    padding: 10px 30px 10px 30px;
-    font-size: 30px;
-    border-radius:5px ;
-}
-body{
+
+.img {
     width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Gen {
+    font-size: 1.25rem;
+}
+
+.sec {
+    width: 100%;
+    max-width: 600px;
     height: auto;
 }
-.article{
-    width: 90%;
+
+.calm {
+    background-color: lawngreen;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
 }
-.align{
-     text-align: left;
-     margin-left: 10px;
+
+.rest, .see {
+    text-align: center;
+}
+
+.down {
+    font-size: 1.5rem;
+}
+
+.see {
+    font-size: 1.25rem;
+    padding-left: 50px;
+    text-align: left;
+}
+
+form {
+    max-width: 100%;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: lawngreen;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(33, 33, 48);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .nav {
+        width: calc(50% - 20px);
+    }
+
+    .togglebar span {
+        width: 35px;
+        height: 3px;
+    }
+
+    .Section1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .hireme {
+        padding: 8px;
+    }
+
+    .affect {
+        font-size: 1.25rem;
+    }
+
+    .img, .sec {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        width: 100%;
+    }
+
+    .togglebar span {
+        width: 30px;
+        height: 2px;
+    }
+
+    .Section1 {
+        font-size: 1.5rem;
+    }
+
+    .hireme {
+        padding: 6px;
+    }
+
+    .affect {
+        font-size: 1rem;
+    }
 }
