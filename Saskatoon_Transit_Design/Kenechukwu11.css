@@ -5,14 +5,14 @@
 }
 
 body {
-    height: 200vh;
+    height: 100vh;
     font-family: Arial, sans-serif;
 }
 
 header {
     background-color: crimson;
     width: 100%;
-    padding: 20px 100px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +34,7 @@ h1 {
     color: white;
     position: relative;
     text-decoration: none;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .navigation_bar a:hover {
@@ -42,7 +42,7 @@ h1 {
 }
 
 .navigation_bar a::after {
-    content: " ";
+    content: "";
     background-color: white;
     height: 3px;
     width: 100%;
@@ -63,12 +63,18 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 60px); /* Adjust height for the fixed header */
     width: 100%;
+    padding-top: 60px; /* To account for the fixed header */
+}
+
+.Saskatoon_icon {
+    margin-bottom: 20px;
 }
 
 .general {
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
     background-color: white;
     font-weight: bolder;
     text-align: center;
@@ -76,21 +82,14 @@ h1 {
     border-radius: 10px;
     margin-bottom: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.buy_passes {
-    background-color: white;
-}
-
-.my_passes {
-    background-color: white;
+    align-items: center;
 }
 
 .middle_body {
     background-color: rgb(5, 90, 218);
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
     height: 250px;
     position: relative;
     margin-bottom: 15px;
@@ -99,36 +98,21 @@ h1 {
 
 .scan_passes {
     background-color: white;
-    margin-top: 60px;
-    width: 450px;
-    position: absolute;
-    left: 550px;
+    width: 90%;
+    max-width: 400px;
     height: 150px;
-    bottom: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 15px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 50px;
-}
-
-.customer_service {
-    background-color: white;
-}
-
-.Help {
-    background-color: white;
-}
-
-.trip_tools {
-    background-color: white;
+    padding: 20px;
 }
 
 .inner_scan_passes {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
 }
 
 .expiration_date_passes {
@@ -145,15 +129,18 @@ h1 {
     font-weight: bolder;
     position: absolute;
     bottom: 20px;
-    right: 550px;
-}
-
-.more_tickets:hover {
+    right: 20px;
     background-color: rgb(122, 122, 228);
     width: 100px;
     height: 25px;
     border-radius: 10px;
-    padding-left: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more_tickets:hover {
+    background-color: rgb(100, 100, 200);
 }
 
 p1 {
@@ -166,25 +153,6 @@ p1 {
 .icons {
     height: 20px;
     width: 20px;
-}
-
-@media screen and (max-width: 1024px) {
-    header {
-        padding: 20px 50px;
-    }
-
-    .navigation_bar a {
-        margin-left: 20px;
-    }
-
-    .scan_passes {
-        left: 200px;
-        width: 80%;
-    }
-
-    .more_tickets {
-        right: 200px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -210,50 +178,17 @@ p1 {
 
     .general {
         width: 90%;
+        max-width: none;
     }
 
     .middle_body {
         width: 90%;
+        max-width: none;
     }
 
     .scan_passes {
         width: 90%;
-        left: 5%;
-    }
-
-    .more_tickets {
-        right: 5%;
-        bottom: 20px;
+        max-width: none;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .general {
-        font-size: 14px;
-        height: auto;
-    }
-
-    .middle_body {
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .scan_passes {
-        height: auto;
-        width: 95%;
-        position: relative;
-        left: 0;
-        margin: 0 auto;
-    }
-
-    .more_tickets {
-        font-size: 12px;
-        width: 80px;
-        height: 20px;
-        right: 10px;
-    }
-
-    p1 {
-        font-size: 12px;
-    }
-}
