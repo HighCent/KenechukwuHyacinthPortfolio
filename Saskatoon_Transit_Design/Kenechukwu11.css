@@ -7,7 +7,7 @@ body{
     height: 200vh;
 }
 header{
-    background-color: crimson;
+/*     background-color: crimson;
     width: 100%;
     padding: 20px 100px;
     display: flex;
@@ -16,7 +16,7 @@ header{
     z-index: 99;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 h1{
     user-select: none;
