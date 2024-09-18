@@ -158,6 +158,7 @@ footer {
 }
 
 /* Responsive Styles */
+/* Responsive Styles */
 @media (max-width: 1200px) {
     .section {
         padding: 20px 50px;
@@ -194,9 +195,15 @@ footer {
         height: 30px;
     }
 
+    /* Section 2 Flexbox Adjustment for Small Screens */
+    .section2_content_image {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .section2_content_sub {
-        width: 100%;
-        height: auto;
+        width: 90%;
+        margin-bottom: 20px;
     }
 
     .section3_writeup {
@@ -231,5 +238,28 @@ footer {
 
     .section3_writeup {
         font-size: 16px;
+    }
+}
+
+/* Footer Styles for Improved Readability */
+footer {
+    height: auto;
+    background-color: rgb(33, 33, 48);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+footer div {
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+@media (max-width: 576px) {
+    footer {
+        font-size: 16px;
+        letter-spacing: 0.08em;
     }
 }
